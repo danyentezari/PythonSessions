@@ -173,6 +173,21 @@ print(location)
 
 
 
+# Two ways to print key/value pairs
+capitalCities = {"Dubai":"UAE", "New Delhi":"India", "Boston":"the United States"}
+
+for city in capitalCities:
+    print('{} is a city in {}'.format(city, capitalCities[city]))
+
+
+def print_dict(theSet):
+    for key in theSet:
+        print('{}: {}'.format(key, theSet[key]))
+
+print_dict(capitalCities)
+
+
+
 # (8) Objects
 # ---------------------------------------------------------------------------------------- #
 class Duck:
