@@ -214,19 +214,20 @@ class Table:
     self.material = material
     self.stability = stability
 
+  # Methods (functions that belong to a class)
   def stabilityReport(self):
-      if(self.stability>=3):
+    if(self.stability>=3):
         return("Very stable")
         
-      elif(self.stability==2):
-        return("Somewhat stable")
+    elif(self.stability==2):
+      return("Somewhat stable")
         
-      elif(self.stability==1):
-        return("Not stable")
-      else:
-        return("Not even a table")
+    elif(self.stability==1):
+      return("Not stable")
+    else:
+      return("Not even a table")
         
-  # Methods (functions)
+  # Another method (not very useful but a method nonetheless)
   def stayStill(self):
       return True
     
