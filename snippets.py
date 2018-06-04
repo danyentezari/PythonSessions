@@ -205,19 +205,11 @@ yourCupOfCoffee = coffeeMachine("small", False, False)
 
 # (8) Classes & Objects
 # ---------------------------------------------------------------------------------------- #
-# A very basic class
-class Table:
-    legs = 4
-    material = "Wood"
-
-    def stayStill():
-        return(True)
-
-# A more meaningful class
+# Example of a class
 class Table:
       
   def __init__(self, legs, material, stability):
-    # Properties (variables)
+    # Properties (variables that belong to a class)
     self.legs = legs
     self.material = material
     self.stability = stability
@@ -235,9 +227,13 @@ class Table:
         return("Not even a table")
         
   # Methods (functions)
-  def stayStill():
+  def stayStill(self):
       return True
     
-
+# Instance of the Table class. Instances are referred to as Objects
 blackWoodenTable = Table(4, "Wood", 2)
-blackWoodenTable.stabilityReport()
+blackWoodenTable.stabilityReport() #Is it stable?
+
+# Another instance of the Table class
+steelTable = Table(2, "Steel", 3)
+steelTable.stabilityReport() #Is it stable?
