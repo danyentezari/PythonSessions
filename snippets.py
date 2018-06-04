@@ -80,7 +80,7 @@ superHeroRealName = {
     }
 
 # Dictionary (another way to do the above)
-superHeroRealName = dict(cat="mammal",lizard="reptile",salmon="fish",parakeet="bird")    
+animals = dict(cat="mammal",lizard="reptile",salmon="fish",parakeet="bird")    
 
 
 
