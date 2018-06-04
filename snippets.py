@@ -163,43 +163,81 @@ def printTheType(m=1):
 
 printTheType(1)
 
-# Scope
+# Scope of a variable
 location = "Im outside"
 def theLocation():
     location = "Im inside"
     return location
 
-print(location)
+print(location) # Will print "I'm outside"
+
+
+# A function with paramters, optional parameters and conditional statements 
+def coffeeMachine(size, milk=False, sugar=False, name=False):
+    theCupOfCoffee = ["lid","insulater"]
+  
+    if(size == "small"):
+        theCupOfCoffee.append("small size")
+    elif(size == "medium"): 
+        theCupOfCoffee.append("medium size")
+    elif(size == "large"): 
+        theCupOfCoffee.append("large size")
+    else:
+        print("Error! Size not specified")
+      
+    if(milk):
+        theCupOfCoffee.append("milk")
+   
+    if(sugar):
+        theCupOfCoffee.append("sugar")
+      
+    if(name != False):
+        theCupOfCoffee.append(str(name))
+  
+    # Everything goes above here!
+    return(theCupOfCoffee)
+
+myCupOfCoffee = coffeeMachine("small", True, True, "Dany")  
+yourCupOfCoffee = coffeeMachine("small", False, False) 
 
 
 
-# Two ways to print key/value pairs
-capitalCities = {"Dubai":"UAE", "New Delhi":"India", "Boston":"the United States"}
 
-for city in capitalCities:
-    print('{} is a city in {}'.format(city, capitalCities[city]))
-
-
-def print_dict(theSet):
-    for key in theSet:
-        print('{}: {}'.format(key, theSet[key]))
-
-print_dict(capitalCities)
-
-
-
-# (8) Objects
+# (8) Classes & Objects
 # ---------------------------------------------------------------------------------------- #
-class Duck:
-    def quack(self):
-        print('Quaaack!')
+# A very basic class
+class Table:
+    legs = 4
+    material = "Wood"
 
-    def walk(self):
-        print('Walks like a duck.')
+    def stayStill():
+        return(True)
 
-def main():
-    donald = Duck()
-    donald.quack()
-    donald.walk()
+# A more meaningful class
+class Table:
+      
+  def __init__(self, legs, material, stability):
+    # Properties (variables)
+    self.legs = legs
+    self.material = material
+    self.stability = stability
 
-if __name__ == '__main__': main()
+  def stabilityReport(self):
+      if(self.stability>=3):
+        return("Very stable")
+        
+      elif(self.stability==2):
+        return("Somewhat stable")
+        
+      elif(self.stability==1):
+        return("Not stable")
+      else:
+        return("Not even a table")
+        
+  # Methods (functions)
+  def stayStill():
+      return True
+    
+
+blackWoodenTable = Table(4, "Wood", 2)
+blackWoodenTable.stabilityReport()
