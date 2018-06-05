@@ -238,3 +238,30 @@ blackWoodenTable.stabilityReport() #Is it stable?
 # Another instance of the Table class
 steelTable = Table(2, "Steel", 3)
 steelTable.stabilityReport() #Is it stable?
+
+
+
+# The wishlist class
+class Wishlist:
+    def __init__(self, startDate, limit):
+        self.startDate = startDate
+        self.limit = limit
+        self.wishlist = []
+    
+    def printFinalWishlist(self):
+        print("You first started the wishlist at this time: {}".format(self.startDate))
+        print(self.wishlist)
+        
+    def startMyWishlist(self):
+      if(len(self.wishlist)<self.limit):
+        enteredItem = input("What item do you want to add? ")
+        print("You entered {}".format(enteredItem))
+
+        if(enteredItem == "STOP"):
+          self.printFinalWishlist()
+          return
+        else:
+          self.wishlist.append(enteredItem)
+          self.startMyWishlist()
+      else:
+        self.printFinalWishlist()
