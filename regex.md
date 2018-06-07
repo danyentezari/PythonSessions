@@ -14,7 +14,7 @@
 ^(05(0|2|4|6))([0-6]|[8-9])\*(777)([0-6]|[8-9])*$
 
 ### Breakdown of the pattern
-| Plugin | README |
+| Expression | Explanation |
 | ------ | ------ |
 |^(05(0\|2\|4\|6)) | pattern starts with 050, or 052, or 054, or 056
 |([0-6]\|[8-9])* | followed by zero or more numbers between 0 to 6 or 8 to 9
