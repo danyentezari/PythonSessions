@@ -22,10 +22,9 @@
 | \(\[0-6]\|[8-9])\*\$ | ending with zero or more numbers between 0 to 6 or 8 to 9
 
 ### Resources
-- Regex Cheatsheet
-[https://www.debuggex.com/cheatsheet/regex/python](https://www.debuggex.com/cheatsheet/regex/python)
-- Video on regular expressions (this is math not programming). 
-[https://www.youtube.com/watch?v=1qGPpeVZvdM]
+- Regex Cheatsheet [https://www.debuggex.com/cheatsheet/regex/python]
+
+- Video on regular expressions (this is math not programming) [https://www.youtube.com/watch?v=1qGPpeVZvdM]
 
     Note:
 Regular expressions are used in Linguistics and Computer Science. You may need some familiarity with notations used in "Formal Languages" and "Automata Theory". 
