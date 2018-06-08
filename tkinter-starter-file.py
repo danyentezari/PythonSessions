@@ -1,4 +1,4 @@
-# Import the tkinter module and include Tk, Label, and Button components.
+# Import the tkinter module and include Tk, Label, and Button widgets.
 # Note that Tk creates the actual window.
 from tkinter import Tk, Label, Button
 
@@ -7,19 +7,19 @@ class MyFirstGUI:
         self.window = window
         window.title("A simple GUI")
 
-        # Create a Label component (object)
+        # Create a Label widget (object)
         self.label = Label(window, text="This is our first GUI!")
-        # Attach the component to the window
+        # Attach the widget to the window
         self.label.pack()
 
-        # Create a Button component (object)
+        # Create a Button widget (object)
         self.someButton = Button(window, text="Say Hello", command=self.sayHello)
-        # Attach the component to the window
+        # Attach the widget to the window
         self.someButton.pack()
 
-        # Create a Button component (object)
+        # Create a Button widget (object)
         self.closeButton = Button(window, text="Close Window", command=window.quit)
-        # Cttach the component to the window
+        # Cttach the widget to the window
         self.closeButton.pack()
 
     def sayHello(self):
