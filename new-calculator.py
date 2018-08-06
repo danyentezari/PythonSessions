@@ -4,6 +4,7 @@ import re
 
 class Calculator:
     def __init__(self, window):
+        
         self.window = window
         self.window.title("Calculator")
         self.total = 0
@@ -23,7 +24,6 @@ class Calculator:
             anchor="ne"
         )
 
-        # self.label.pack
         self.label.grid(row=0, column=0, columnspan=4, sticky="nsew")
 
         newRow = 1
@@ -47,10 +47,12 @@ class Calculator:
                 newRow += 1
                 newCol = 0
 
+    # Handler for keyboard key press
     def keyInput(self, event=None):
         if(re.match('[0-9]',event.keysym)):
             self.label.configure(text=event.keysym)
-        
+
+    # Handler for widget clicked by mousr    
     def btnInput(self, event):
         lcd = self.label
         
@@ -72,6 +74,7 @@ class Calculator:
                 lcd.configure(text= event.widget["text"])
                 self.arithmeticMode = False
 
+        # Log self.total to see the value in the terminal
         pprint(self.total)
 
 
